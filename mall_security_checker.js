@@ -13,7 +13,7 @@ function startbot(){
     var allowed_male_Visitors = 0;
     var allowed_female_Visitors = 0;
     var visitors_Denied = 0;
-    var visitors_Allowed =0;
+    var visitors_Allowed = 0;
     var customerName
     var customerGender
     var customerAge
