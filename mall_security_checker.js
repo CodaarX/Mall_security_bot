@@ -3,64 +3,66 @@
 // Shopping mall security bot
 
 // instantiate and define  variables
+var hasMask
 
-var customerName = prompt('What is your name?');
-var customerGender = prompt('What is your gender?');
-var customerAge = prompt('what is your age?')
-var hasMask = prompt('Do you have a facemask on?');
-var visitorsAllowed = 0;
-var visitorsDenied = 0;
-var allowedfemaleVisitors = 0;
-var allowedmaleVisitors = 0;
-var rejectedmaleVisitors = 0;
-var rejectedfemaleVisitors = 0;
-
+function startbot(){
+    customerName = prompt('What is your name?');
+    customerGender = prompt('What is your gender?');
+    customerAge = prompt('what is your age?');
+    hasMask = prompt('Do you have a facemask on?');
 
 // check if customers wear masks and if customers are 12 years and older
 
 if (hasMask === 'yes' && customerAge >= 12){
-    console.log('welcome to Mike El Plaza ' + customerName)
+    console.log('welcome to Mike El Plaza ' + customerName);
     // count visitors allowed and count if visitors are males or females
-    visitorsAllowed = visitorsAllowed += 1
+    var visitors_Allowed = 0;
+    visitors_Allowed += 1;
     if(customerGender === "male"){
-        allowedmaleVisitors = allowedmaleVisitors += 1
+        var allowed_male_Visitors = 0;
+        allowed_male_Visitors += 1;
     } else {
-        allowedfemaleVisitors = allowedfemaleVisitors += 1}
+        var allowed_female_Visitors = 0;
+        allowed_female_Visitors += 1}
 }
 
 // check if customers wear masks and if customers are younger than 12 years
 
-if (hasMask === 'yes' && customerAge <= 12){
+else if (hasMask === 'yes' && customerAge <= 12){
     console.log(customerName + ' you must be 12 years or older to enter Mike El Plaza')
     // count rejected visitors and count if visitors are males or females
-    visitorsDenied = visitorsDenied += 1
-    if(customerGender === "male"){
-        rejectedmaleVisitors = rejectedmaleVisitors += 1
-    } else {
-        rejectedfemaleVisitors = rejectedfemaleVisitors += 1}
+        var visitors_Denied = 0;
+        visitors_Denied += 1;
+        if(customerGender === "male"){
+            var rejected_male_Visitors = 0;
+            rejected_male_Visitors += 1;
+        } else {
+            var rejected_female_Visitors = 0;     
+            rejected_female_Visitors += 1}
 }
-
-
-// check if customers wear masks and if customers are younger than 12 years
-
-
+// check if customers wear masks
 if (hasMask === 'no' ){
-    console.log(customerName + ' you have been denied entry into enter Mike El Plaza for users without a facemask')
+    console.log(customerName + ' you have been denied entry into enter Mike El Plaza for users without a facemask');
     // count recectors visitors allowed and count if visitors are males or females
-    visitorsDenied = visitorsDenied += 1
+    var visitors_Denied = 0;
+    visitors_Denied += 1;
     if(customerGender === "male"){
-        rejectedmaleVisitors = rejectedmaleVisitors += 1
+        var rejected_male_Visitors = 0;
+        rejected_male_Visitors += 1;
     } else {
-        rejectedfemaleVisitors = rejectedfemaleVisitors += 1}
-}
+        var rejected_female_Visitors = 0}
+        rejected_female_Visitors += 1}
+
 
 
 // log to the console all results
+console.log('Number of rejected female visitors: ', rejected_female_Visitors)
+console.log('Number of rejected male visitors: ', rejected_male_Visitors)
+console.log('Number of allowed female visitors: ', allowed_female_Visitors)
+console.log('Number of allowed male visitors: ', allowed_male_Visitors)
+console.log('Number of allowed visitors: ', visitors_Allowed)
+console.log('Number of rejected visitors: ', visitors_Denied)
 
-console.log('Number of rejected female visitors: ', rejectedfemaleVisitors)
-console.log('Number of rejected male visitors: ', rejectedmaleVisitors)
-console.log('Number of allowed female visitors: ', allowedfemaleVisitors)
-console.log('Number of allowed male visitors: ', allowedmaleVisitors)
-console.log('Number of allowed visitors: ', visitorsAllowed)
+}
 
-
+startbot();
