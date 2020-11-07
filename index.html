@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eminence mall</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body">
+    <section class="main-container">
+        <div id="contents">
+            <h1 id="heading-1">
+                Welcome to Eminence Mall 
+            </h1>
+            <p id="paragraph">
+                Please note you must have your facemak worn, and be 12 years old and above to enter. 
+            </p>
+            <form id="form">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="please input your name">
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" placeholder="please input your age">
+                </div> 
+                <div id="selector">
+                    <label id = "select" for="select">Do you have a facemask</label>
+                    <select name="select" id="select" >
+                        <option value="yes">select an option</option>
+                        <option value="yes">Yes i do</option>
+                        <option value="no">No i don't</option>
+                    </select>
+                </div>
+                <input class="btn" type="button" value="Submit">
+                <div>
+                    <h2>Counter</h2>
+                </div>
+                <div id="counter">
+                    <p id="allowedV">Allowed visitors: </p>
+                    <p id="deniedV">Denied visitors: </p>
+                    <p id="totalV">Total visitors: </p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="js.Main.js"></script>
+</body>
+</html>

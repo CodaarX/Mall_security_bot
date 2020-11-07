@@ -19,10 +19,27 @@ function startbot(){
     var customerAge
     
         customerName = prompt('What is your name?');
+        prompt('please enter your name')
+        } if (typeof customerName === string){
+            
         customerGender = prompt('What is your gender?');
+        if(customerGender === null || typeof customerGender !== String ){
+            prompt('please enter your gender')
+        }
+        
         customerAge = prompt('what is your age?');
+        if(typeof customerAge === NaN){
+            prompt('please enter your Age')
+        }
         hasMask = prompt('Do you have a facemask on?');
-    
+        if(customerName === null){
+            prompt('please enter your name')
+        }
+
+    }
+
+
+
     // check if customers wear masks and if customers are 12 years and older
     
     if (hasMask === 'yes' && customerAge >= 12){
