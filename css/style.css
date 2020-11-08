@@ -66,7 +66,7 @@ input{
     margin: auto;
 }
 
-.btn{
+#btn{
     cursor: pointer;
     background-color: #016c7e;
     display: block;
@@ -78,7 +78,7 @@ input{
     color: white;
 }
 
-.btn:hover{
+#btn:hover{
     cursor: pointer;
     background-color: #24bdd8;
     width: 55%;
@@ -185,7 +185,7 @@ h2{
         margin: auto;
     }
     
-    .btn{
+    #btn{
         cursor: pointer;
         background-color: #016c7e;
         display: block;
