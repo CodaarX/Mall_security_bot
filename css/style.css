@@ -122,6 +122,10 @@ h2{
     color: red;
 }
 
+#totalV{
+    color: rgb(15, 15, 15);
+}
+
 
 /* responsive */
 @media (max-width: 800px ){

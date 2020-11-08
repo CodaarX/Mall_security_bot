@@ -1,97 +1,34 @@
-// Javascript Objects Part 2
 
-// Shopping mall security bot
+var name = prompt("what is your name")
+var age = prompt("what is your age")
+var select = prompt("do you have a facemask")
 
-// instantiate and define  variables
+var totalVisitors = 0;
+var deniedVisitors = 0;
+var allowedVisitors = 0;
 
-
-function startbot(){
-
-    var hasMask
-    var rejected_female_Visitors = 0;
-    var rejected_male_Visitors = 0;
-    var allowed_male_Visitors = 0;
-    var allowed_female_Visitors = 0;
-    var visitors_Denied = 0;
-    var visitors_Allowed = 0;
-    var customerName
-    var customerGender
-    var customerAge
-    
-        customerName = prompt('What is your name?');
-        prompt('please enter your name')
-        } if (typeof customerName === string){
-            
-        customerGender = prompt('What is your gender?');
-        if(customerGender === null || typeof customerGender !== String ){
-            prompt('please enter your gender')
-        }
-        
-        customerAge = prompt('what is your age?');
-        if(typeof customerAge === NaN){
-            prompt('please enter your Age')
-        }
-        hasMask = prompt('Do you have a facemask on?');
-        if(customerName === null){
-            prompt('please enter your name')
-        }
-
+function start(){
+    totalVisitors += 1;
+    if(typeof name !== "string"){
+        alert("please enter a name. numbers or symbols are not allowed")   
+    } else if(age < 12){ 
+        alert(name + ", you have to be older than 12 years old to enter")
+            deniedVisitors += 1;
+    } else if (select !== "yes"){
+        alert("Sorry, you need to have your facemask on to enter")
+            deniedVisitors += 1;
+    } else{
+        alert('welcome to Eminence Mall, ' + name)
+        allowedVisitors += 1;
     }
 
+totalVisitors = alert(`Total visitors: ${totalVisitors++}`)
+
+deniedVisitors = alert(`Denied visitors: ${deniedVisitors++}`)
+
+allowedVisitors = alert(`Allowed visitors: ${allowedVisitors++}`)
+
+}
 
 
-    // check if customers wear masks and if customers are 12 years and older
-    
-    if (hasMask === 'yes' && customerAge >= 12){
-        console.log('welcome to Mike El Plaza ' + customerName);
-        // count visitors allowed and count if visitors are males or females
-        var visitors_Allowed = 0;
-        visitors_Allowed += 1;
-        if(customerGender === "male"){
-            var allowed_male_Visitors = 0;
-            allowed_male_Visitors += 1;
-        } else {
-            var allowed_female_Visitors = 0;
-            allowed_female_Visitors += 1}
-    }
-    
-    // check if customers wear masks and if customers are younger than 12 years
-    
-    else if (hasMask === 'yes' && customerAge <= 12){
-        console.log(customerName + ' you must be 12 years or older to enter Mike El Plaza')
-        // count rejected visitors and count if visitors are males or females
-            var visitors_Denied = 0;
-            visitors_Denied += 1;
-            if(customerGender === "male"){
-                var rejected_male_Visitors = 0;
-                rejected_male_Visitors += 1;
-            } else {
-                var rejected_female_Visitors = 0;     
-                rejected_female_Visitors += 1}
-    }
-    // check if customers wear masks
-    else if (hasMask === 'no' ){
-        console.log(customerName + ' you have been denied entry into enter Mike El Plaza for users without a facemask');
-        // count recectors visitors allowed and count if visitors are males or females
-        var visitors_Denied = 0;
-        visitors_Denied += 1;
-        if(customerGender === "male"){
-            var rejected_male_Visitors = 0;
-            rejected_male_Visitors += 1;
-        } else {
-            var rejected_female_Visitors = 0}
-            rejected_female_Visitors += 1}
-    
-    
-    
-    // log to the console all results
-    console.log('Number of rejected female visitors: ', rejected_female_Visitors)
-    console.log('Number of rejected male visitors: ', rejected_male_Visitors)
-    console.log('Number of allowed female visitors: ', allowed_female_Visitors)
-    console.log('Number of allowed male visitors: ', allowed_male_Visitors)
-    console.log('Number of allowed visitors: ', visitors_Allowed)
-    console.log('Number of rejected visitors: ', visitors_Denied)
-    
-    }
-    
-    startbot();
+start()
