@@ -7,6 +7,7 @@ var totalVisitors = 0
 var deniedVisitors = 0
 var allowedVisitors = 0
 
+var button = document.getElementById("btn").addEventListener("click", 
 function start(){
 if(name.value !== "string"){
         alert("Input your name")
@@ -35,11 +36,11 @@ allowedVisitors = document.getElementById("allowedV").textContent = `Allowed vis
 
 name.value = ''      
 age.value = ''
-maskChecker.value = 'No'
+maskChecker.value = 'select'
 
-}
+})
 
 
-var button = document.getElementById("btn").onclick(start())
+
 
 
