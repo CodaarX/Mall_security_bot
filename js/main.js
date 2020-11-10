@@ -7,7 +7,8 @@ var totalVisitors = 0;
 var deniedVisitors = 0;
 var allowedVisitors = 0;
 
-var button = document.getElementById("btn").addEventListener("click", function start(){
+var button = document.getElementById("btn").addEventListener("click", function (event){
+    event.preventDefault();
     totalVisitors += 1;
     if(typeof name !== "string"){
         alert("please enter a name. numbers or symbols are not allowed")   
