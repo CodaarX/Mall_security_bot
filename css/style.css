@@ -223,6 +223,7 @@ h2{
         border: none;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
+
     }
 
     #counter p{
@@ -230,6 +231,8 @@ h2{
         text-align: center;
         justify-self: center;
         padding-bottom: 1rem;
+        padding-right: 0.5rem;
+
     }
     
     h2{
